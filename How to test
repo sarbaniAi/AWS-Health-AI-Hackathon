@@ -1,5 +1,5 @@
 
-Steps to test
+**Steps to test**
 
 Run the notebooks in order datasets are present in datset zip folder. Place the input files (as mentioned below) in the same folder as notebook and run all cells.
 
