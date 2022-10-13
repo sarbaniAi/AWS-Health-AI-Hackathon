@@ -1,0 +1,18 @@
+
+Steps to test
+
+Run the notebooks in order datasets are present in datset zip folder. Place the input files (as mentioned below) in the same folder as notebook and run all cells.
+
+Notebook -1 : "1-model-trained-with-tabular-labitems-only.ipynb" :  The input file is "lab_items_v01.csv"
+
+Notebook-2: "2-AWSMedicalComprehend-extract-diagnosis-from-DischargeSummary.ipynb" : Input files are "lab_items_v01.csv" & "noteevents_hf_v01.csv". Output is "extract_df.csv". 
+But we will not recommend to run it again. Our AWS Account charged 4000 dollar to extract this "extract_df.csv" from "noteevents_hf_v01.csv" using AWS Comprehend Medical. 
+Hence recomeding DO NOT run Notebook-2, use "extract_df.csv" as input  Nootebook-3 directly.
+
+
+Notebook -3: "3-Cluster-DiagnosisNames-from-DischargeSummary-TopicModelling.ipynb" : Input file "extract_df.csv". Output "dxcode-cluster.csv".
+
+Notebook-4: "4-AWSComprehendMedicalExtract+TabularItems-Train-Predict.ipynb" : Input files are "dxcode-cluster.csv" , "lab_items_v01.csv", "noteevents_hf_v01.csv"
+Output - Model results.
+
+
